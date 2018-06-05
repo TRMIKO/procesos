@@ -34,7 +34,7 @@
     <div class="row">
 
       <div class="col-md-2" style="position:fixed;">
-  <br>
+        <br>
         <div class="" style="height: calc(100vh - 48px); overflow-x:hidden; z-index:999;">
           <form v-on:submit.prevent="test()">
             <div class="form-row">
@@ -71,7 +71,7 @@
           </table>
         </div>
       </div>
-      <div class="col-md-9 offset-md-2">
+      <div class="col-md-10 offset-md-2">
 
         <div class="row">
           <div class="col-md-4 offset-md-2">
@@ -98,6 +98,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.1/math.min.js"></script>
 
   <script type="text/javascript">
     var app = new Vue({
@@ -188,8 +189,9 @@
             }
 
           }
-          console.log(this.tot);
-
+          console.log(this.tot)
+          console.log(math.pow(this.tot, 2));
+            
           var ctx = document.getElementById("myChart").getContext('2d');
           var myChart = new Chart(ctx, {
             type: 'bar',
